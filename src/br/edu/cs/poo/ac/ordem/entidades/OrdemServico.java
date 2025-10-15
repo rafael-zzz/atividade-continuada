@@ -1,5 +1,6 @@
 package br.edu.cs.poo.ac.ordem.entidades;
 
+import java.io.Serializable;
 import java.time.LocalDate; 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -8,7 +9,7 @@ import lombok.Getter;
 import lombok.Setter; 
 import lombok.AllArgsConstructor; 
 @AllArgsConstructor 
-public class OrdemServico { 
+public class OrdemServico implements Serializable { 
 	@Getter @Setter 
 	private Cliente cliente; 
 	@Getter @Setter 
@@ -21,6 +22,9 @@ public class OrdemServico {
 	private LocalDateTime dataHoraAbertura; 
 	@Getter @Setter private int prazoEmDias; 
 	@Getter @Setter private double valor; 
+	public OrdemServico(Cliente cli1, PrecoBase manutencaoNormal, Notebook note, Object object, LocalDateTime dataHora1,
+			int i, double d) { 
+	}
 	public LocalDate getDataEstimadaEntrega() { 
 		return dataHoraAbertura.plusDays(prazoEmDias).toLocalDate(); 
 	} 
