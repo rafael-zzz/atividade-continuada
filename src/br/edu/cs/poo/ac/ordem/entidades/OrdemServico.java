@@ -22,9 +22,7 @@ public class OrdemServico implements Serializable {
 	private LocalDateTime dataHoraAbertura; 
 	@Getter @Setter private int prazoEmDias; 
 	@Getter @Setter private double valor; 
-	public OrdemServico(Cliente cli1, PrecoBase manutencaoNormal, Notebook note, Object object, LocalDateTime dataHora1,
-			int i, double d) { 
-	}
+	
 	public LocalDate getDataEstimadaEntrega() { 
 		return dataHoraAbertura.plusDays(prazoEmDias).toLocalDate(); 
 	} 

@@ -55,7 +55,7 @@ public class TesteEntidades {
 	}
 	@Test
 	public void testeDataEstimadaEntregaOrdemServico() {
-		OrdemServico ordem = new OrdemServico(CLI1, PrecoBase.MANUTENCAO_NORMAL, 
+		OrdemServico ordem = new OrdemServico(CLI1, PrecoBase.MANUTENCAO_NORMAL,
 				NOTE, null, DATA_HORA1, 5, 100.0);
 		LocalDate dataEstimada = ordem.getDataEstimadaEntrega();
 		dataEstimada.equals(LocalDate.parse("2000-02-06"));
